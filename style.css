@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #141423;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+}
+.loader-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.primary-mesure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem .5rem;
+    width: 100%;
+}
+
+.time-icon {
+    width: 120px;
+}
+
+h1 {
+    font-size: .9rem;
+    color: #ffffff;
+}
+
+.country-name {
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.temperature-container {
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.temperature {
+    text-align: center;
+}
+
+.temperature h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.temperature-unit {
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: .8rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/*---------- les mesures secondaires ------------*/
+.secondary-mesures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding: 1rem;
+    justify-content: center;
+    margin:0 auto;
+}
+
+.mesure-card {
+    background-color: #f2f2f2;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem;
+    gap: .1rem;
+}
+
+.secondary-icon {
+    width: 35px;
+}
+
+.mesure-card h3 {
+    font-size: .875rem;
+    color: #333;
+}
+
+.mesure-card p {
+    font-size: .75rem;
+    color: #555;
+}
+
+/*------ pied de page ----------------*/
+footer {
+    padding: 1rem .8rem;
+}
+
+footer p {
+    font-size: .75rem;
+    color: #aaa;
+    text-align: center;
+}
+
+footer p a {
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+/*-------- classe utilitaires pour le fond dégradé --------*/
+
+.soleil {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 170, 70, .30), rgba(255, 120, 40, .12) 40%, transparent 55%);
+}
+
+.peu_nuageux {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 185, 107, .28), rgba(255, 150, 80, .10) 40%, transparent 55%);
+}
+
+.pluie_abondante {
+    background: radial-gradient(circle at 50% 0%, rgba(57, 127, 210, .30), rgba(35, 85, 160, .12) 40%, transparent 55%);
+}
+
+.nuageux {
+    background: radial-gradient(circle at 50% 0%, rgba(132, 149, 176, .25), rgba(100, 115, 145, .10) 40%, transparent 55%);
+}
+
+.brouillard {
+    background: radial-gradient(circle at 50% 0%, rgba(155, 168, 184, .24), rgba(120, 135, 155, .09) 40%, transparent 55%);
+}
+
+.bruine {
+    background: radial-gradient(circle at 50% 0%, rgba(110, 169, 222, .28), rgba(70, 130, 190, .11) 40%, transparent 55%);
+}
+
+.neigeux {
+    background: radial-gradient(circle at 50% 0%, rgba(156, 201, 233, .28), rgba(110, 165, 210, .10) 40%, transparent 55%);
+}
+
+.orage {
+    background: radial-gradient(circle at 50% 0%, rgba(114, 85, 201, .32), rgba(70, 50, 145, .13) 40%, transparent 55%);
+}
+
+@media screen and (min-width: 768px) {
+    .primary-mesure {
+        min-height: 350px;
+    }
+
+    .secondary-mesures {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .primary-mesure {
+        min-height: 430px;
+    }
+
+    .primary-mesure h2 {
+        font-size: 4rem;
+    }
+
+    .temperature-unit {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .secondary-mesures {
+        grid-template-columns: repeat(4, 250px);
+        padding: 2rem 1rem;
+    }
+
+    .city-name {
+        font-size: 1rem;
+    }
+
+    .country-name {
+        font-size: .875rem;
+    }
+
+    .mesure-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .secondary-icon {
+        width: 50px;
+    }
+
+    .mesure-card h3 {
+        font-size: 1rem;
+    }
+
+    .mesure-card p {
+        font-size: .9rem;
+    }
+}
