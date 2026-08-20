@@ -10,6 +10,38 @@ body {
     font-family: "Poppins", sans-serif;
     background: #141423;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+}
+.loader-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 .primary-mesure {
     display: flex;
@@ -17,6 +49,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 3rem 1rem .5rem;
+    width: 100%;
 }
 
 .time-icon {
@@ -66,6 +99,7 @@ h1 {
     gap: .5rem;
     padding: 1rem;
     justify-content: center;
+    margin:0 auto;
 }
 
 .mesure-card {
@@ -84,7 +118,7 @@ h1 {
 }
 
 .mesure-card h3 {
-    font-size: .9rem;
+    font-size: .875rem;
     color: #333;
 }
 
@@ -99,7 +133,7 @@ footer {
 }
 
 footer p {
-    font-size: .875rem;
+    font-size: .75rem;
     color: #aaa;
     text-align: center;
 }
@@ -147,6 +181,10 @@ footer p a {
     .primary-mesure {
         min-height: 350px;
     }
+
+    .secondary-mesures {
+        grid-template-columns: repeat(2, 200px);
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -167,8 +205,8 @@ footer p a {
     }
 
     .secondary-mesures {
-        grid-template-columns: repeat(4, 280px);
-        padding: 2rem 4rem;
+        grid-template-columns: repeat(4, 250px);
+        padding: 2rem 1rem;
     }
 
     .city-name {
